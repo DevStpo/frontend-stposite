@@ -1,0 +1,86 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+	.container{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	header{
+		width: 100%;
+		display: inline-flex;
+		align-items: center;
+		background-color: pink;
+	}
+	header .logo{
+		width: 4rem;
+		padding: 0;
+		margin: .8rem;
+	}
+	header .logo img{
+		width: 100%;
+	}
+	header .menu{
+		width: 5rem;
+		font-size: 1.1rem;
+		font-weight: bold;
+		padding: .4rem 0 0 1rem ;
+	}
+	header .menu_ul{
+		display: flex;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	header .menu_li{
+		justify-content: center;
+		list-style: none;
+	}
+	header .menu_li a{
+		color: black;
+		text-decoration: none;
+	}
+	.arrow{
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: middle;
+	  color: black;
+	  box-sizing: border-box;
+	  width: 0;
+	  height: 0;
+	  border: 3px solid transparent;
+	  border-top: 3px solid;
+	  border-right: 3px solid;
+	  margin: 10px;
+	  transform: rotate(135deg);
+	  margin-bottom: 12px;
+	 }
+
+	hr{
+		border-color: silver;
+		width: 100%;
+	}
+	
+	.content{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: blue;
+	}
+	.content_img{
+		width: 100%;
+	}
+	.content_img img{
+		width: 100%;
+	}
+	.content_text{
+		width: 100%;		
+	}
+	.content_p{
+		font-size: 1.5rem;
+		padding: 0 2rem;
+		letter-spacing: .3px;
+		line-height: 1.5;
+		font-weight: bold;
+	}
