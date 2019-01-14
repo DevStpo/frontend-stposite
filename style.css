@@ -11,12 +11,11 @@ body{
 		width: 100%;
 		display: inline-flex;
 		align-items: center;
-		background-color: pink;
 	}
 	header .logo{
 		width: 4rem;
 		padding: 0;
-		margin: .8rem;
+		margin: 1rem 0 0 1.5rem;
 	}
 	header .logo img{
 		width: 100%;
@@ -25,7 +24,7 @@ body{
 		width: 5rem;
 		font-size: 1.1rem;
 		font-weight: bold;
-		padding: .4rem 0 0 1rem ;
+		padding: 1rem 0 0 1rem ;
 	}
 	header .menu_ul{
 		display: flex;
