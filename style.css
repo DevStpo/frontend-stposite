@@ -64,28 +64,21 @@ table {
 	flex-wrap: wrap;
 	align-items: center;
 }
-.topbar__logo{
-	background-color: red;
-	width: 8rem;
-	margin: 15px 0 15px 20px;
-	display: flex;
-	justify-content: center;
+.topbar__logo img{
+	width: 6rem;
+	padding: 15px 0 15px 20px;
 }
-.menu--m{
-	background-color: silver;
-	width: 5rem;
-	margin: 15px 0 0 20px;
+.menu--mobile{
+	display: none;
+}
+.menu ul{
 	display: flex;
 }
-.mainmenu ul{
-	display: flex;
-}
-.mainmenu li{
+.menu__item{
 	padding: 1rem;
 }
 .arrow{
-	background-color: pink;
-  position: relative;
+	position: relative;
   display: inline-block;
   vertical-align: middle;
   color: black;
@@ -99,24 +92,20 @@ table {
   transform: rotate(135deg);
   margin-bottom: 12px;
 }
-.mainmenu{
+.menu{
 	padding-left: 1rem;
 }
 
-@media screen and (min-width: 600px) {
-	.menu--m{
-		visibility: hidden;
-		order: 3;
+@media screen and (max-width: 699px) {
+	.menu{
+		display: none;
+	}
+	.menu--mobile{
+		width: 5rem;
+		margin: 15px 0 0 20px;
+		display: flex;
 	}
 	.arrow{
-		visibility: hidden;
-	}
-}
-@media screen and (max-width: 599px) {
-	.mainmenu{
-		visibility: hidden;
-	}
-	.topbar{
-		flex-wrap: nowrap;
+		display: inline-block;
 	}
 }
