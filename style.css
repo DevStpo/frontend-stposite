@@ -48,18 +48,12 @@ table {
 }
 /*content main*/
 .main{
-	background-color: pink;
 	width: 100%;
-  display: -webkit-box;
- 	display: -moz-box;
- 	display: -ms-flexbox;
-	display: -webkit-flex;
  	display: flex;
 	flex-flow: column wrap;
 }
 
 .topbar{
-	background-color: cyan;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -96,7 +90,7 @@ table {
 	padding-left: 1rem;
 }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 600px) {
 	.menu{
 		display: none;
 	}
