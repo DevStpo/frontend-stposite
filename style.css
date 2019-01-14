@@ -1,85 +1,122 @@
-body{
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-	.container{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-	}
-	header{
-		width: 100%;
-		display: inline-flex;
-		align-items: center;
-	}
-	header .logo{
-		width: 4rem;
-		padding: 0;
-		margin: 1rem 0 0 1.5rem;
-	}
-	header .logo img{
-		width: 100%;
-	}
-	header .menu{
-		width: 5rem;
-		font-size: 1.1rem;
-		font-weight: bold;
-		padding: 1rem 0 0 1rem ;
-	}
-	header .menu_ul{
-		display: flex;
-		width: 100%;
-		padding: 0;
-		margin: 0;
-	}
-	header .menu_li{
-		justify-content: center;
-		list-style: none;
-	}
-	header .menu_li a{
-		color: black;
-		text-decoration: none;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*content main*/
+.main{
+	background-color: pink;
+	width: 100%;
+  display: -webkit-box;
+ 	display: -moz-box;
+ 	display: -ms-flexbox;
+	display: -webkit-flex;
+ 	display: flex;
+	flex-flow: column wrap;
+}
+
+.topbar{
+	background-color: cyan;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.topbar__logo{
+	background-color: red;
+	width: 8rem;
+	margin: 15px 0 15px 20px;
+	display: flex;
+	justify-content: center;
+}
+.menu--m{
+	background-color: silver;
+	width: 5rem;
+	margin: 15px 0 0 20px;
+	display: flex;
+}
+.mainmenu ul{
+	display: flex;
+}
+.mainmenu li{
+	padding: 1rem;
+}
+.arrow{
+	background-color: pink;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: black;
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  border-top: 3px solid;
+  border-right: 3px solid;
+  margin: 5px 0 0 10px;
+  transform: rotate(135deg);
+  margin-bottom: 12px;
+}
+.mainmenu{
+	padding-left: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+	.menu--m{
+		visibility: hidden;
+		order: 3;
 	}
 	.arrow{
-	  position: relative;
-	  display: inline-block;
-	  vertical-align: middle;
-	  color: black;
-	  box-sizing: border-box;
-	  width: 0;
-	  height: 0;
-	  border: 3px solid transparent;
-	  border-top: 3px solid;
-	  border-right: 3px solid;
-	  margin: 10px;
-	  transform: rotate(135deg);
-	  margin-bottom: 12px;
-	 }
-
-	hr{
-		border-color: silver;
-		width: 100%;
+		visibility: hidden;
 	}
-	
-	.content{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		background-color: blue;
+}
+@media screen and (max-width: 599px) {
+	.mainmenu{
+		visibility: hidden;
 	}
-	.content_img{
-		width: 100%;
+	.topbar{
+		flex-wrap: nowrap;
 	}
-	.content_img img{
-		width: 100%;
-	}
-	.content_text{
-		width: 100%;		
-	}
-	.content_p{
-		font-size: 1.5rem;
-		padding: 0 2rem;
-		letter-spacing: .3px;
-		line-height: 1.5;
-		font-weight: bold;
-	}
+}
