@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a{
+	text-decoration: none;
+}
 /*content main*/
 .main{
 	width: 100%;
@@ -73,23 +76,97 @@ table {
 }
 .arrow{
 	position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  color: black;
-  box-sizing: border-box;
-  width: 0;
-  height: 0;
-  border: 3px solid transparent;
-  border-top: 3px solid;
-  border-right: 3px solid;
-  margin: 5px 0 0 10px;
-  transform: rotate(135deg);
-  margin-bottom: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	color: black;
+	box-sizing: border-box;
+	width: 0;
+	height: 0;
+	border: 3px solid transparent;
+	border-top: 3px solid;
+	border-right: 3px solid;
+	margin: 5px 0 0 10px;
+	transform: rotate(135deg);
+	margin-bottom: 12px;
 }
 .menu{
 	padding-left: 1rem;
 }
+/*end topbar*/
 
+.block{
+	background-color: #511c74;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.block__text{
+	width: 100%;
+}
+.block__image{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.block__image--height{
+	height: 80vh;
+}
+.block__image--background{
+	background-image: url("img/Capture1.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: cover;
+}
+.button{
+
+	width: 18rem;
+	height: 4rem;
+	display: flex;
+}
+.button__play{
+	flex-grow: 1;
+	font-size: 1.4rem;
+	color: white;
+	font-weight: bold;
+}
+.button__text{
+	flex-grow: 3;
+	font-size: 1.4rem;
+	color: white;
+	font-weight: bold;
+}
+.button--color{
+	background-color: #db124b;
+	border-color: transparent;
+	margin: .1rem;
+}
+.block__text{
+	width: 100%;
+}
+.block__text--size{
+	font-size: 3rem;
+	line-height: 1.5;
+	font-weight: bold;
+}
+.block__text--padding{
+	padding: 5rem;
+}
+.block__text--white{
+	color: white;
+}
+.block__image--padding{
+	padding: 3rem;
+}
+
+@media screen and (max-width: 1050px) {
+	.block__image--background{
+	background-position: center;
+	background-size: 1100px;
+	background-attachment: none;
+}
+}
 @media screen and (max-width: 600px) {
 	.menu{
 		display: none;
@@ -101,5 +178,23 @@ table {
 	}
 	.arrow{
 		display: inline-block;
+	}
+	.button{
+	width: 12rem;
+	height: 3rem;
+	display: flex;
+	}
+	.button__play{
+		font-size: 1rem;
+	}
+	.button__text{
+		font-size: .8rem;
+	}
+	.block__text--size{
+		font-size: 1.5rem;
+		padding: 2rem;
+	}
+	.block__image--padding{
+		padding: 0;
 	}
 }
