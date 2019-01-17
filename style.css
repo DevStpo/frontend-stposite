@@ -48,31 +48,35 @@ table {
 }
 a{
 	text-decoration: none;
+	color: black;
 }
 /*content main*/
+
 .main{
 	width: 100%;
  	display: flex;
 	flex-flow: column wrap;
+	font-family: "Arboria";
 }
-
+/* --------------- start topbar -----------------*/
 .topbar{
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	align-items: center;
 }
-.topbar__logo img{
-	width: 6rem;
-	padding: 15px 0 15px 20px;
+.topbar__logo{
+	width: 20%;
+	min-width: 12rem;
+}
+.topbar__logo--img{
+	width: 100%;
+	padding: 15px 0 15px 5px;
 }
 .menu--mobile{
 	display: none;
 }
-.menu ul{
-	display: flex;
-}
 .menu__item{
-	padding: 1rem;
+	flex-grow: 2;
 }
 .arrow{
 	position: relative;
@@ -89,10 +93,13 @@ a{
 	transform: rotate(135deg);
 	margin-bottom: 12px;
 }
-.menu{
-	padding-left: 1rem;
+.menu__list{
+
+	display: flex;
+	width: 60vw;
+
 }
-/*end topbar*/
+		/*end topbar*/
 
 .block{
 	background-color: #511c74;
@@ -165,15 +172,25 @@ a{
 	background-position: center;
 	background-size: 1100px;
 	background-attachment: none;
-}
+	}
+	.menu__item a{
+	font-size: .8rem;
+	}
 }
 @media screen and (max-width: 600px) {
+	.topbar__logo{
+	width: auto;
+	}
+	.topbar__logo img{
+	width: 12rem;
+	padding: 10px 0 10px 0px;
+	}
 	.menu{
 		display: none;
 	}
 	.menu--mobile{
 		width: 5rem;
-		margin: 15px 0 0 20px;
+		margin-top: ;
 		display: flex;
 	}
 	.arrow{
