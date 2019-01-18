@@ -1,4 +1,16 @@
 @font-face {
-font-family: "Arboria";
+font-family: "Arboria-Medium";
 src: url("fonts/Arboria/TTF/Arboria-Medium.ttf");
+}
+@font-face {
+font-family: "Arboria-bold";
+src: url("fonts/Arboria/TTF/Arboria-Bold.ttf");
+}
+@font-face {
+font-family: "Arboria-black";
+src: url("fonts/Arboria/TTF/Arboria-Black.ttf");
+}
+@font-face {
+font-family: "Arboria-light";
+src: url("fonts/Arboria/TTF/Arboria-Light.ttf");
 }

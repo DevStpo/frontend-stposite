@@ -55,8 +55,7 @@ a{
 .main{
 	width: 100%;
  	display: flex;
-	flex-flow: column wrap;
-	font-family: "Arboria";
+	flex-wrap: wrap;
 }
 /* --------------- start topbar -----------------*/
 .topbar{
@@ -77,6 +76,7 @@ a{
 }
 .menu__item{
 	flex-grow: 2;
+	font-family: Arboria-bold;
 }
 .arrow{
 	position: relative;
@@ -101,33 +101,19 @@ a{
 }
 		/*end topbar*/
 
-.block{
-	background-color: #511c74;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-}
-.block__text{
-	width: 100%;
-}
-.block__image{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.block__image--height{
-	height: 80vh;
-}
-.block__image--background{
+.blockFullWidthImg{
 	background-image: url("img/Capture1.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-attachment: cover;
+	background-position: center;
+	width: 100%;
+	height: 80vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
 }
 .button{
-
 	width: 18rem;
 	height: 4rem;
 	display: flex;
@@ -137,38 +123,42 @@ a{
 	font-size: 1.4rem;
 	color: white;
 	font-weight: bold;
+	background-color: #db124b;
+	border-color: transparent;
+	margin: .1rem;
 }
 .button__text{
 	flex-grow: 3;
 	font-size: 1.4rem;
 	color: white;
-	font-weight: bold;
-}
-.button--color{
+	font-family: Arboria-bold;
 	background-color: #db124b;
 	border-color: transparent;
 	margin: .1rem;
 }
-.block__text{
+.blockTextBold{
+	background-color: #511c74;
 	width: 100%;
 }
-.block__text--size{
+.blockTextBold p{
 	font-size: 3rem;
 	line-height: 1.5;
-	font-weight: bold;
-}
-.block__text--padding{
+	font-family: Arboria-bold;
 	padding: 5rem;
-}
-.block__text--white{
 	color: white;
 }
-.block__image--padding{
+.blockImg{
+	background-color: #511c74;
+	display: flex;
 	padding: 3rem;
+}
+.blockImg img{
+		width: 100%;
+		height: 100%;
 }
 
 @media screen and (max-width: 1050px) {
-	.block__image--background{
+	.blockFullWidthImg{
 	background-position: center;
 	background-size: 1100px;
 	background-attachment: none;
@@ -190,6 +180,7 @@ a{
 	}
 	.menu--mobile{
 		width: 5rem;
+		font-family: Arboria-bold;
 		margin-top: ;
 		display: flex;
 	}
@@ -207,11 +198,11 @@ a{
 	.button__text{
 		font-size: .8rem;
 	}
-	.block__text--size{
+	.blockTextBold p{
 		font-size: 1.5rem;
 		padding: 2rem;
 	}
-	.block__image--padding{
+	.blockImg{
 		padding: 0;
 	}
 }
