@@ -51,7 +51,7 @@ a{
 	color: black;
 }
 html {
-	font-family: Arboria-bold;
+	font-family: Arboria-medium;
 }
 /*content main*/
 
@@ -106,7 +106,7 @@ html {
 }
 		/**** end topbar ****/
 
-.blockFullWidthImg{
+.blockBgImg{
 	background-image: url("img/Capture1.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -159,32 +159,32 @@ html {
 	width: 100%;
 	height: 100%;
 }
-.fullWidthImg {
+.blockFullWidthImg {
 	width: 100%;
 	height: 60vh;
 	justify-content: center;
 	display: flex;
 }
-.fullWidthImg img {
+.blockFullWidthImg img {
 	width: 100%;
 }
-.blockTextNotice {
+.blockTitleText {
 	width: 100%;
 	background-color: #db124b;
-	padding: 2rem 25rem 2rem 12rem;
+	padding: 2rem 12rem 2rem 12rem;
 }
-.blockTextNotice__title {
+.blockTitleText__title {
 	font-size: 2.8em;
 	margin-bottom: 1.5rem;
 }
-.blockTextNotice__par {
+.blockTitleText__text {
 	font-family: Arboria-medium;
 	font-size: 1.4em;
-	line-height: 2;
+	line-height: 2.5;
 }
 
 @media screen and (max-width: 1080px) {
-	.blockFullWidthImg {
+	.blockBgImg {
 		background-position: center;
 		background-size: 1100px;
 		background-attachment: none;
@@ -229,7 +229,7 @@ html {
 	.blockMarginImg{
 		padding: 0;
 	}
-	.fullWidthImg {
+	.blockFullWidthImg {
 		height: 40vh;
 	}
 	.blockTextNotice {
