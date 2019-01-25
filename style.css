@@ -182,7 +182,68 @@ html {
 	font-size: 1.4em;
 	line-height: 2.5;
 }
-
+.footer {
+	width: 100%;
+	padding: 1rem 8rem;
+}
+.blockFooter {
+	width: 100%;
+	display: flex;
+}
+.blockTitleTextSmall {
+	width: 50%;
+	padding: 2rem 4rem;
+}
+.blockTitleTextSmall__title {
+	font-size: 1em;
+	margin-bottom: 1rem;
+}
+.blockTitleTextSmall__text {
+	font-size: .8em;
+	line-height: 3;	
+}
+.blockParner {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.blockParner img{
+	width: 60px;
+	height: 40px;
+	flex-grow: 1;
+	padding-left: 1em;
+}
+.blockSuscribe {
+	width: 40vw;
+	justify-content: center;
+	align-content: center;
+	display: flex;
+	padding-left: 4em;
+}
+.blockSuscribe label input{
+	height: 1.8rem;
+	width: 20rem;
+}
+.footerMenu {
+	padding-left: 4rem;
+	padding-top: 1rem;
+	padding: 1rem 4rem 0 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footerMenuImg {
+	width: 5vw;
+	align-self: flex-end;
+}
+.footerMenuImg img{
+	width: 100%;
+	align-self: flex-end;
+}
+.footerMenu__menu {
+	width: 80%;
+}
 @media screen and (max-width: 1080px) {
 	.blockBgImg {
 		background-position: center;
@@ -232,14 +293,14 @@ html {
 	.blockFullWidthImg {
 		height: 40vh;
 	}
-	.blockTextNotice {
+	.blockTitleText {
 		padding: 2rem;
 	}
-	.blockTextNotice__title {
+	.blockTitleText__title {
 		font-size: 2rem;
 		margin-bottom: 1.5rem;
 	}
-	.blockTextNotice__par {
+	.blockTitleText__text {
 		font-family: Arboria-medium;
 		font-size: 1.2rem;
 		line-height: 1.5;
