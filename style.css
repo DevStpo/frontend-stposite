@@ -53,6 +53,9 @@ a{
 html {
 	font-family: Arboria-medium;
 }
+button:active {
+	color: #511c74;
+}
 /*content main*/
 
 .main{
@@ -64,13 +67,11 @@ html {
 .topbar{
 	height: 6rem;
 	display: flex;
-	flex-wrap: nowrap;
 	align-items: center;
 }
 .topbar__logo{
 	width: 20%;
 	min-width: 12rem;
-	padding-bottom: ;
 }
 .topbar__logo img{
 	width: 100%;
@@ -103,7 +104,7 @@ html {
 }
 .menu__list{
 	display: flex;
-	width: 60vw;;
+	width: 60vw;
 }
 		/**** end topbar ****/
 
@@ -190,26 +191,34 @@ html {
 	background-color: yellow;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 10rem 10rem 10rem 10rem;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 
 	10rem;
-	grid-gap: 1rem;
 	justify-content: center;
 	align-items: center;
+	justify-items: center;
 }
 .blockInfoThree {
 	background-color: yellow;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 10rem 10rem 10rem;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 
 	10rem;
-	grid-gap: 1rem;
 	justify-content: center;
 	align-items: center;
+	justify-items: center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.blockInfoOne {
+	display: none;
+}
+.blockInfoThree--mobile {
+	display: none;
 }
 .blockInfo__img{
-	width: 80%;
+	width: 10em;
 }
 .blockThreeImg {
 	background-color: cyan;
@@ -309,28 +318,31 @@ html {
 .blockPartner img{
 	width: 20%;
 }
+/****Subscribe****/
 .blockSubscribe {
 	grid-column: 1 span;
-}
-.blockSubscribeMobile label {
+	margin: 0;
 	display: flex;
 	width: 100%;
 }
+.blockSubscribe label {
+	margin: 0;
+}
 .blockSubscribe__input {
-	font-size: 1.3em;
-	padding-left: .5em;
-	height: 2.9rem;
-	width: 65%;
+	margin: 0;
+	font-size: 1em;
+	padding: .5em;
+	width: 20em;
 }
-.blockSubscribe__input--background {
-	background-color: silver;
-	border: 0em;
+.blockSubscribe__button {
+	margin: 0;
+	font-size: 1em;
+	padding: .5em;
+	background-color: #db124b;
+	color: white;
+	border-color: #db124b;
 }
-.buttonOpenModal__text--height {
-	height: 3rem;
-	width: 30%;
-	margin-left: -.5em;
-}
+
 .footerMenu {
 	grid-column: 2 span;
 	display: flex;
@@ -366,22 +378,7 @@ html {
 	justify-self: center;
 	padding: 1em;
 }
-.blockSubscribeMobile {
-	width: 90%;
-	display: flex;
-}
-.blockSubscribeMobile__input {
-	font-size: 1em;
-	height: 2.89rem;
-	width: 100%;
-	padding-left: 1em;
-}
-.buttonOpenModalMobile__text {
-	height: 3rem;
-	width: 40%;
-	background-color: #db124b;
-	border: none;
-}
+
 .footerMenuMobile {
 	display: flex;
 	margin-top: 2em;
@@ -400,9 +397,31 @@ html {
 	font-size: 1em;
 }
 .footerMenuImgMobile {
-	margin-left: 35%;
-	margin-right: 35%;
-	width: 30%;
+	align-self: center;
+}
+.blockSubscribeMobile {
+	grid-column: 1 span;
+	margin: auto;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.blockSubscribeMobile label {
+	margin: 0;
+}
+.blockSubscribeMobile__input {
+	margin: 0;
+	font-size: 1em;
+	padding: .5em;
+	width: 20em;
+}
+.buttonOpenModalMobile__text {
+	margin: 0;
+	font-size: 1em;
+	padding: .5em;
+	background-color: #db124b;
+	color: white;
+	border-color: #db124b;
 }
 @media screen and (max-width: 1080px) {
 	.blockBgImg {
@@ -432,13 +451,16 @@ html {
 	}
 	.blockTextBold p {
 		font-size: 2rem;
-		padding: 2em;
+		padding: 1em;
 	}
 	.blockTitleText {
 		padding: 2em;
 	}
 	.blockInfoFour {
 		grid-gap: 0em;
+	}
+	.blockInfo__img {
+		width: 6em;
 	}
 	.blockThreeImg {
 		display: flex;
@@ -472,23 +494,13 @@ html {
 	.footerContainer {
 		padding: 1em 2em;
 	}
-	.blockSubscribe {
-		width: 90%;
-		display: flex;
+	.footerLogo {
+		padding-top: 2em;
 	}
-	.blockSubscribe__input {
-		font-size: 1em;
-		height: 2.89rem;
-		width: 100%;
-		padding-left: 1em;
+	.footerLogo img	{
+		width: 15em;
 	}
-	.buttonOpenModal__text {
-		height: 3rem;
-		width: 40%;
-		background-color: #db124b;
-		border: none;
-		font-size: 1em;
-	}
+
 }
 @media screen and (max-width: 600px) {
 	.topbar__logo{
@@ -514,20 +526,17 @@ html {
 		display: flex;
 	}
 	.buttonOpenModal__play{
-		font-size: 1rem;
+		font-size: .8rem;
 	}
 	.buttonOpenModal__text{
 		font-size: .8rem;
 	}
 	.blockTextBold p{
 		font-size: 1.5rem;
-		padding: 2rem;
+		padding: 1rem;
 	}
 	.blockMarginImg{
 		padding: 0;
-	}
-	.blockFullWidthImg {
-		height: 40vh;
 	}
 	.blockTitleText {
 		padding: 2rem;
@@ -545,7 +554,35 @@ html {
 		display: none;
 	}
 	.blockInfoThree {
-		display: none;
+		grid-template-rows: 1fr;
+	}
+	.blockInfoThree--mobile {
+		background-color: yellow;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 
+		1fr;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	.blockInfoOne {
+		background-color: yellow;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 
+		1fr;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+
+	}
+	.blockInfo__img {
+		width: 5em;
 	}
 	.blockTextTwoColumns {
 		grid-template-columns: 100%;
@@ -563,7 +600,6 @@ html {
 		font-size: 1em;
 		line-height: 2;
 		color: rgb(51, 51, 51);
-
 		padding: 0;
 		margin: 0;
 	}
@@ -576,10 +612,16 @@ html {
 		padding-left: 1em;
 		padding-right: 1em;
 	}
-	.blockSubscribeMobile {
-		padding-left: auto;
+	.footerMobile__logo {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		padding-top: 1em;
+	
 	}
-	.buttonOpenModalMobile__text {
-		color: white;
+	.footerMobile__logo img {
+		width: 20em;
+		align-self: center;
 	}
+	
 }
