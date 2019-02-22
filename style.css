@@ -268,6 +268,7 @@ button:active {
 	background-color: gold;
 	width: 100%;
 	padding-top: 4rem;
+	padding-bottom: 4rem;
 	display: flex;
 	flex-flow: column wrap;
 }
@@ -283,11 +284,22 @@ button:active {
 	width: 60rem;
 	border: none;
 }
+.blockFormulary__button {
+	margin: 0;
+	font-size:1em;
+	padding: .5em;
+	background-color: #511c74;
+	color: white;
+	border-color: #511c74;
+	width: 10vw;
+	align-self: center;
+}
 .footerContainer {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	padding: 1em 8em;
+	grid-template-rows: 5em 1fr 1fr 1fr 5em 5em;
+	padding: 1em 6em;
 	grid-column-gap: 2em;
 }
 .footerLogo {
@@ -300,10 +312,11 @@ button:active {
 }
 .blockTitleTextSmall {
 	justify-self: center;
-	padding: 2em 0;
+	padding: 1em 0;
 }
 .blockTitleTextSmall__title {
 	font-size: 1.2em;
+	padding-bottom: 1em;
 }
 .blockTitleTextSmall__text {
 	font-size: 1em;
@@ -317,53 +330,66 @@ button:active {
 }
 .blockPartner img{
 	width: 20%;
+	margin-right: .5em;
 }
 /****Subscribe****/
 .blockSubscribe {
-	grid-column: 1 span;
+	grid-column: 1;
+	grid-row: 5;
 	margin: 0;
 	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 	width: 100%;
 }
 .blockSubscribe label {
 	margin: 0;
+	width: 100%;
 }
 .blockSubscribe__input {
 	margin: 0;
 	font-size: 1em;
 	padding: .5em;
-	width: 20em;
+	width: 100%;
 }
 .blockSubscribe__button {
 	margin: 0;
-	font-size: 1em;
+	font-size:1em;
 	padding: .5em;
-	background-color: #db124b;
+	background-color: #511c74;
 	color: white;
-	border-color: #db124b;
+	border-color: #511c74;
+	height: 2.4em;;
 }
 
 .footerMenu {
-	grid-column: 2 span;
+	grid-column: 1;
+	grid-row: 6;
 	display: flex;
+	align-content: center;
+	align-items: center;
 }
 .footerMenu__list {
 	width: 100%;
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-self: center;
-	justify-content: space-around;
+	flex-grow: 1;
 }
 .footerMenu__list__item {
 	align-self: center;
+	margin: 1em;
+	flex-grow: inherit;
 }
 .footerMenuImg {
+	grid-column: 2;
+	grid-row: 6;
 	display: flex;
-	justify-self: self-end	;
-}
-.footerMenuImg {
-	width: 7em;
-	height: 7em	;
+	justify-self: end;
+	margin-right: 0;
+	width: 5em;
+	height: 5em;
 }
 .footerMobile {
 	display: none;
@@ -400,7 +426,8 @@ button:active {
 	align-self: center;
 }
 .blockSubscribeMobile {
-	grid-column: 1 span;
+	grid-column: 1;
+	grid-row: 5;
 	margin: auto;
 	display: flex;
 	width: 100%;
@@ -413,15 +440,15 @@ button:active {
 	margin: 0;
 	font-size: 1em;
 	padding: .5em;
-	width: 20em;
+	
 }
 .buttonOpenModalMobile__text {
 	margin: 0;
 	font-size: 1em;
 	padding: .5em;
-	background-color: #db124b;
+	background-color: #511c74;
 	color: white;
-	border-color: #db124b;
+	border-color: #511c74;
 }
 @media screen and (max-width: 1080px) {
 	.blockBgImg {
@@ -602,6 +629,10 @@ button:active {
 		color: rgb(51, 51, 51);
 		padding: 0;
 		margin: 0;
+	}
+	.blockFormulary__button {
+		width: 20vw;
+		font-size: .8em;
 	}
 	.footerContainer {
 		display: none;
